@@ -1,6 +1,5 @@
 package br.com.dio.desafio.v2;
 
-import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,11 +26,15 @@ public class Dev {
     }
 
     public double calcularTotalXp() {
-        double soma = 0;
-        for (Conteudo conteudo : this.conteudosConcluidos) {
-            soma += conteudo.calcularXp();
-        }
-        return soma;
+        //double soma = 0;
+        //for (Conteudo conteudo : this.conteudosConcluidos) {
+        //    soma += conteudo.calcularXp();
+        //}
+        //return soma;
+        return this.conteudosConcluidos
+            .stream()
+            .mapToDouble(conteudo -> conteudo.calcularXp())
+            .sum();
     }
 
     public String getNome() {

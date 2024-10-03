@@ -1,9 +1,9 @@
+import java.time.LocalDate;
+
 import br.com.dio.desafio.v2.Bootcamp;
 import br.com.dio.desafio.v2.Curso;
 import br.com.dio.desafio.v2.Dev;
 import br.com.dio.desafio.v2.Mentoria;
-
-import java.time.LocalDate;
 
 public class MainV2 {
     public static void main(String[] args) {
